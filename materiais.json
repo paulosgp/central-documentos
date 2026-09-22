@@ -1,0 +1,25 @@
+{
+  "geradoEm": "2026-09-22T02:47:30.126Z",
+  "categorias": [
+    {
+      "id": "rh-e-servidor",
+      "nome": "RH e servidor",
+      "materiais": [
+        {
+          "titulo": "Anexo IV - PONTO MANUAL",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo IV - PONTO MANUAL.docx",
+          "tipo": "word",
+          "tamanho": 201350,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "Anexo VI - Memorando",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo VI - Memorando.docx",
+          "tipo": "word",
+          "tamanho": 75418,
+          "atualizadoEm": "2026-08-30"
+        }
+      ]
+    }
+  ]
+}

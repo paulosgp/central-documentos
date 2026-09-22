@@ -1,0 +1,6 @@
+{
+  "name": "central-documentos",
+  "private": true,
+  "description": "Central de Documentos da SMS de Sao Mateus do Sul - site estatico no GitHub Pages",
+  "scripts": { "publicar": "node publicar.js", "test": "node --test" }
+}
