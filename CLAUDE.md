@@ -54,8 +54,11 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
 - **Subpasta de primeiro nível = categoria.** Pasta nova = categoria nova, sem mexer em código.
   As três conhecidas têm nome bonito e ordem fixos no `NOMES` do `publicar.js`
   (`RH E SERVIDOR` → "RH e servidor", `OFICIOS E MEMORANDOS` → "Ofícios e memorandos",
-  `FORMULARIOS ASSISTENCIAIS` → "Formulários assistenciais"); pasta fora do mapa entra depois,
-  em ordem alfabética, com o nome da pasta como está.
+  `FORMULARIOS ASSISTENCIAIS` → "Formulários assistenciais", e desde 22/09/2026 as duas que o
+  Paulo criou: `ESTRATIFICAÇÕES DE RISCO` → "Estratificações de risco", `ANEXOS ADMINISTRATIVO`
+  → "Anexos administrativos"); pasta fora do mapa entra depois, em ordem alfabética, com o nome
+  da pasta como está — o que, para pasta em maiúsculas, fica gritado ("ANEXOS ADMINISTRATIVO" foi
+  assim na primeira publicação); quando ele criar pasta nova, acrescentar ao mapa.
 - **Nome do arquivo sem extensão = título** exibido. Acento e espaço podem.
 - **Ignorados**: `LEIA-ME.txt` e arquivos começando com `.` (em silêncio: são esperados — o
   `.gitkeep` segura cada categoria vazia no Git); arquivos começando com `_` ou `~$`
@@ -104,7 +107,11 @@ padrão.
   92% no computador) com um `<iframe>`, o Baixar e o Fechar no topo; o botão Baixar da linha
   continua salvando o original (dois links irmãos na linha; anchor aninhado não existe em HTML).
   Ctrl+clique ainda abre em aba nova, e dentro da janela há um link "abra em outra aba" para
-  quando o iframe não carregar. Ao fechar, o iframe vai para `about:blank` (para de carregar e
+  quando o iframe não carregar.
+  **O Baixar da janela fica no rodapé, grande, com o texto "Baixar este documento"**, ao lado de
+  um Fechar também com texto: o Paulo apontou que o visualizador da Microsoft não deixa claro
+  como baixar — e a primeira versão tinha o Baixar no topo, que no celular herdava a regra da
+  lista (abaixo de 420 px o rótulo some) e virava um círculo verde sem palavra. Ao fechar, o iframe vai para `about:blank` (para de carregar e
   não mostra o documento anterior na próxima abertura). PDF e
   imagem o navegador mostra sozinho. **Word, Excel e PowerPoint vão ao visualizador online do
   Office** (`view.officeapps.live.com/op/embed.aspx?src=<URL absoluta>` — `embed`, e não `view`: é a
@@ -160,6 +167,9 @@ não faz parte do site.
 
 ## Pendências
 
-- A pasta tem só os dois arquivos que o Paulo colocou em RH; Ofícios e Formulários estão vazias e
-  por isso não aparecem no site. Ele vai preenchendo; publicar é `node publicar.js` + commit +
-  push.
+- **A publicação não é automática, e o Paulo esperou que fosse** (22/09/2026: "já coloquei várias
+  coisas na pasta e não aparecem no site"). Foi ele quem escolheu, em 21/09, "coloco na pasta e
+  mando você publicar" em vez de uma tarefa agendada; se a espera virar incômodo, o caminho é a
+  opção 2 daquela pergunta: tarefa no Agendador do Windows rodando `node publicar.js` + commit +
+  push (como o backup diário do Planifica Fácil). Primeira publicação com conteúdo em 22/09/2026:
+  14 materiais em 3 categorias; `FORMULARIOS ASSISTENCIAIS` e `ESTRATIFICAÇÕES DE RISCO` vazias.

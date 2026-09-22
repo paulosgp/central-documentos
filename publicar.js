@@ -16,6 +16,8 @@ const NOMES = new Map([
   ['RH E SERVIDOR', 'RH e servidor'],
   ['OFICIOS E MEMORANDOS', 'Ofícios e memorandos'],
   ['FORMULARIOS ASSISTENCIAIS', 'Formulários assistenciais'],
+  ['ESTRATIFICAÇÕES DE RISCO', 'Estratificações de risco'],
+  ['ANEXOS ADMINISTRATIVO', 'Anexos administrativos'],
 ]);
 
 const TIPOS = {

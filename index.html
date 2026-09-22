@@ -146,6 +146,18 @@ dialog.previa::backdrop{background:rgba(10,20,15,.6)}
 .previa-aviso{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:15.5px}
 .previa-aviso a{color:var(--chip-ink);font-weight:600}
 .previa-corpo.carregou .previa-aviso{display:none}
+/* O Baixar da janela fica no RODAPÉ, grande e com texto, e nunca vira só ícone: o Paulo apontou
+   (22/09/2026) que o visualizador da Microsoft não deixa claro como baixar — e, no celular, o
+   Baixar que estava no topo herdava a regra da lista e virava um círculo verde sem palavra. */
+.previa-rodape{display:flex;align-items:center;gap:10px;padding:10px 12px;border-top:1px solid var(--line);
+  flex:0 0 auto;background:var(--card)}
+.previa-rodape .baixar.grande{flex:1;justify-content:center;min-height:52px;font-size:17px;padding:12px 18px;
+  border-radius:14px;text-decoration:none}
+.previa-rodape .baixar.grande span{display:inline!important}
+.previa-rodape .baixar.grande svg{width:20px;height:20px}
+.fechar-texto{flex:0 0 auto;min-height:52px;padding:12px 18px;border:1px solid var(--line);background:var(--bg);
+  color:var(--ink);border-radius:14px;font:inherit;font-weight:600;font-size:16px;cursor:pointer}
+.fechar-texto:hover,.fechar-texto:focus-visible{border-color:var(--verde)}
 </style>
 </head>
 <body>
@@ -175,12 +187,15 @@ dialog.previa::backdrop{background:rgba(10,20,15,.6)}
         <span class="titulo" id="previa-titulo"></span>
         <span class="meta" id="previa-meta"></span>
       </span>
-      <a class="baixar" id="previa-baixar" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span>Baixar</span></a>
       <button class="fechar" id="previa-fechar" type="button" aria-label="Fechar">×</button>
     </div>
     <div class="previa-corpo" id="previa-corpo">
       <p class="previa-aviso" id="previa-aviso">Carregando o documento… Se não aparecer, <a id="previa-fora" href="#" target="_blank" rel="noopener">abra em outra aba</a> ou toque em Baixar.</p>
       <iframe id="previa-quadro" title="Documento"></iframe>
+    </div>
+    <div class="previa-rodape">
+      <a class="baixar grande" id="previa-baixar" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span>Baixar este documento</span></a>
+      <button class="fechar-texto" id="previa-fechar-2" type="button">Fechar</button>
     </div>
   </dialog>
 
@@ -267,6 +282,7 @@ dialog.previa::backdrop{background:rgba(10,20,15,.6)}
   function fecharPrevia() { quadro.src = 'about:blank'; if (dlg.open) dlg.close(); }
   quadro.addEventListener('load', function () { if (quadro.src && quadro.src !== 'about:blank') corpo.classList.add('carregou'); });
   $('previa-fechar').addEventListener('click', fecharPrevia);
+  $('previa-fechar-2').addEventListener('click', fecharPrevia);
   dlg.addEventListener('close', fecharPrevia);
   dlg.addEventListener('click', function (e) { if (e.target === dlg) fecharPrevia(); }); // toque no fundo escuro
 

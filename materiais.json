@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T02:47:30.126Z",
+  "geradoEm": "2026-09-22T03:16:44.859Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -13,10 +13,106 @@
           "atualizadoEm": "2026-08-30"
         },
         {
+          "titulo": "Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS.docx",
+          "tipo": "word",
+          "tamanho": 77842,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "DADOS PARA O CONTRATO DE ESTÁGIO",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DADOS PARA O CONTRATO DE ESTÁGIO.docx",
+          "tipo": "word",
+          "tamanho": 15931,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR.docx",
+          "tipo": "word",
+          "tamanho": 16631,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "escala_setembro_2026",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/escala_setembro_2026.xlsx",
+          "tipo": "excel",
+          "tamanho": 11764,
+          "atualizadoEm": "2026-09-22"
+        },
+        {
+          "titulo": "FORMULARIO HORA EXTRA",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FORMULARIO HORA EXTRA.docx",
+          "tipo": "word",
+          "tamanho": 97883,
+          "atualizadoEm": "2026-09-22"
+        },
+        {
+          "titulo": "PLANILHA AUT. H.E.",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/PLANILHA AUT. H.E..docx",
+          "tipo": "word",
+          "tamanho": 119233,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS.docx",
+          "tipo": "word",
+          "tamanho": 109093,
+          "atualizadoEm": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "id": "oficios-e-memorandos",
+      "nome": "Ofícios e memorandos",
+      "materiais": [
+        {
           "titulo": "Anexo VI - Memorando",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo VI - Memorando.docx",
+          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Anexo VI - Memorando.docx",
           "tipo": "word",
           "tamanho": 75418,
+          "atualizadoEm": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "id": "anexos-administrativo",
+      "nome": "Anexos administrativos",
+      "materiais": [
+        {
+          "titulo": "Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR - 1.2023",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR - 1.2023.docx",
+          "tipo": "word",
+          "tamanho": 198430,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "Anexo III - MODELO COTAÇÃO",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo III - MODELO COTAÇÃO.pdf",
+          "tipo": "pdf",
+          "tamanho": 357481,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "Anexo IV - Solicitação de consertos",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo IV - Solicitação de consertos.docx",
+          "tipo": "word",
+          "tamanho": 198622,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "Anexo V - Pedidos materiais e outros",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo V - Pedidos materiais e outros.docx",
+          "tipo": "word",
+          "tamanho": 210922,
+          "atualizadoEm": "2026-08-30"
+        },
+        {
+          "titulo": "Anexo VI - Check list veículos",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo VI - Check list veículos.xls",
+          "tipo": "excel",
+          "tamanho": 236032,
           "atualizadoEm": "2026-08-30"
         }
       ]
