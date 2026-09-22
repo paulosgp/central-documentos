@@ -83,13 +83,18 @@ h2{font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-weight:600;font-size
 h2 small{letter-spacing:0;text-transform:none;font-weight:400;margin-left:8px}
 
 .lista{display:flex;flex-direction:column;gap:8px;list-style:none;margin:0;padding:0}
-/* Uma linha por arquivo, 56 px no mínimo: o alvo de toque no celular. A linha inteira é o link,
-   com `download`: o navegador salva em vez de tentar abrir o .docx. */
+/* Uma linha por arquivo, 56 px no mínimo: o alvo de toque no celular. Dois links irmãos na linha
+   (não aninhados — HTML não permite): o nome abre a PRÉ-VISUALIZAÇÃO em aba nova, e o botão
+   Baixar, com `download`, faz o navegador salvar em vez de tentar abrir o .docx. Pedido do Paulo
+   em 22/09/2026: ver antes de imprimir. */
 .item{display:flex;align-items:center;gap:12px;min-height:56px;background:var(--card);
-  border:1px solid var(--line);border-radius:14px;padding:10px 12px;text-decoration:none;
-  color:inherit;box-shadow:var(--sombra);transition:border-color .14s ease}
-.item:hover,.item:focus-visible{border-color:var(--verde)}
-.item:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+  border:1px solid var(--line);border-radius:14px;padding:10px 12px;
+  box-shadow:var(--sombra);transition:border-color .14s ease}
+.item:hover,.item:focus-within{border-color:var(--verde)}
+.ver{display:flex;flex:1;min-width:0;align-items:center;gap:12px;text-decoration:none;color:inherit;
+  border-radius:10px}
+.ver:hover .titulo{text-decoration:underline;text-decoration-color:var(--verde)}
+.ver:focus-visible,.baixar:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
 .icone{width:40px;height:40px;flex:0 0 auto;border-radius:10px;display:grid;place-items:center;
   color:#fff;font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em}
 .icone.word{background:var(--word)}.icone.excel{background:var(--excel)}.icone.powerpoint{background:var(--powerpoint)}
@@ -129,7 +134,7 @@ footer b{color:var(--ink)}
 
   <h1>Central de <span>Documentos</span></h1>
   <div class="linha"></div>
-  <p class="chamada">Modelos, fichas e formulários da Secretaria de Saúde, num lugar só. Toque em <b>Baixar</b> e o arquivo vai para o seu celular ou computador.</p>
+  <p class="chamada">Modelos, fichas e formulários da Secretaria de Saúde, num lugar só. Toque no <b>nome</b> para ver o documento antes de imprimir, ou em <b>Baixar</b> para salvar no seu celular ou computador.</p>
 
   <div class="busca">
     <label for="q">Buscar documento pelo nome</label>
@@ -191,16 +196,34 @@ footer b{color:var(--ink)}
     p.setAttribute('d', 'M12 4v12M6 11l6 6 6-6M5 20h14'); s.appendChild(p); return s;
   }
 
+  // Onde o nome do arquivo leva. PDF e imagem o navegador mostra sozinho. Word, Excel e
+  // PowerPoint vão ao visualizador online do Office, que renderiza com fidelidade e sem instalar
+  // nada — só funciona porque o site é público (o visualizador busca o arquivo pela URL).
+  // Escolhido pelo Paulo em 22/09/2026 no lugar de gerar PDF na publicação. Os demais tipos não
+  // têm pré-visualização: o nome baixa, igual ao botão.
+  var VISUALIZADOR_OFFICE = 'https://view.officeapps.live.com/op/view.aspx?src=';
+  function previa(m, href) {
+    if (m.tipo === 'pdf' || m.tipo === 'imagem') return { href: href, download: false };
+    if (m.tipo === 'word' || m.tipo === 'excel' || m.tipo === 'powerpoint') {
+      var absoluta = new URL(href, location.href).href;
+      return { href: VISUALIZADOR_OFFICE + encodeURIComponent(absoluta), download: false };
+    }
+    return { href: href, download: true };
+  }
+
   function item(m) {
     // encodeURI: o caminho vem com espaço e acento, do jeito que o arquivo se chama na pasta.
-    var a = el('a', { class: 'item', href: encodeURI(m.arquivo), download: '' });
-    a.appendChild(el('span', { class: 'icone ' + m.tipo, text: SIGLA[m.tipo] || '…', 'aria-hidden': 'true' }));
-    a.appendChild(el('span', { class: 'texto' }, [
+    var href = encodeURI(m.arquivo);
+    var p = previa(m, href);
+    var ver = el('a', { class: 'ver', href: p.href, title: p.download ? 'Baixar' : 'Ver o documento' });
+    if (p.download) ver.setAttribute('download', ''); else { ver.setAttribute('target', '_blank'); ver.setAttribute('rel', 'noopener'); }
+    ver.appendChild(el('span', { class: 'icone ' + m.tipo, text: SIGLA[m.tipo] || '…', 'aria-hidden': 'true' }));
+    ver.appendChild(el('span', { class: 'texto' }, [
       el('span', { class: 'titulo', text: m.titulo }),
       el('span', { class: 'meta', text: (ROTULO[m.tipo] || 'Arquivo') + ' · ' + tamanho(m.tamanho) + ' · ' + dataBR(m.atualizadoEm) })
     ]));
-    a.appendChild(el('span', { class: 'baixar' }, [svgSeta(), el('span', { text: 'Baixar' })]));
-    return a;
+    var baixar = el('a', { class: 'baixar', href: href, download: '', 'aria-label': 'Baixar ' + m.titulo }, [svgSeta(), el('span', { text: 'Baixar' })]);
+    return el('div', { class: 'item' }, [ver, baixar]);
   }
 
   function render(filtro) {

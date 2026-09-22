@@ -98,6 +98,17 @@ padrão.
   página aplica `encodeURI` ao montar o link. Um caminho como
   `MATERIAIS%20PUBLICADOS/RH%20E%20SERVIDOR/Ficha%20de%20f%C3%A9rias.docx` é feio mas correto,
   e ninguém compartilha o link do arquivo — compartilha a página (ou a categoria, por âncora).
+- **Pré-visualização (22/09/2026).** O Paulo perguntou se dava para ver o arquivo antes de
+  imprimir. O nome do material abre a pré-visualização em aba nova e o botão Baixar continua
+  salvando o original (dois links irmãos na linha; anchor aninhado não existe em HTML). PDF e
+  imagem o navegador mostra sozinho. **Word, Excel e PowerPoint vão ao visualizador online do
+  Office** (`view.officeapps.live.com/op/view.aspx?src=<URL absoluta>`), que renderiza com
+  fidelidade, no celular, sem instalar nada — e só funciona porque o site é público (o
+  visualizador busca o arquivo pela URL; em `localhost` ele não abre, de propósito). Ele
+  escolheu isso, e não gerar PDF na publicação com o Word desta máquina (mais robusto, mas a
+  publicação passaria a depender do Word e cada material viraria dois arquivos). Se a Microsoft
+  desligar o visualizador, o caminho B está no plano: converter com o Word ao publicar. Tipos sem
+  pré-visualização (`outro`) baixam pelo nome também.
 - **`.nojekyll` na raiz.** Sem ele, o Jekyll do Pages ignora nomes que começam com `_` e pode
   processar o restante.
 - **`<a download>` na linha inteira.** O atributo faz o navegador salvar em vez de tentar abrir
@@ -118,7 +129,7 @@ padrão.
   mesmo arquivo é o ícone do cartão no Guia Saúde.
 - **Colisão de nomes** (spec §2, item 3) não foi implementada: dois arquivos com o mesmo nome
   não coexistem na mesma pasta do Windows, então não há o que detectar.
-- **O `CNAME` só entrou no repositório depois de o DNS publicar.** Com `CNAME` presente, o
+- **O `CNAME` só entrou no repositório depois de o DNS publicar** (22/09/2026, minutos depois do registro no Registro.br; o certificado saiu `approved` sem empurrão e o `https_enforced` foi ligado pela API na sequência). Com `CNAME` presente, o
   GitHub redireciona `paulosgp.github.io/central-documentos` para o domínio personalizado — e
   enquanto o DNS não existe, o redirecionamento leva a lugar nenhum. Roteiro de DNS e HTTPS
   (conferir no `nslookup`, nunca no painel; `https_certificate` pela API; `Enforce HTTPS` é um
@@ -130,15 +141,17 @@ padrão.
 `.claude/serve-central.js`, porta 4174). É um servidor estático só para o Claude olhar a página;
 não faz parte do site.
 
-## Pendências (22/09/2026)
+## Histórico
 
-1. **DNS**: criar o `CNAME` `central` → `paulosgp.github.io.` na zona de
-   `saudesaomateusdosul.com.br`, no Registro.br. O Claude abriu o painel no Chrome do Paulo, mas
-   a sessão estava deslogada e senha é coisa que só ele digita. Assim que ele entrar, o Claude
-   cria o registro pelo Chrome (como fez para o Encaminha em 21/09/2026).
-2. Depois que `nslookup central.saudesaomateusdosul.com.br 8.8.8.8` responder: `CNAME` no
-   repositório, `https_certificate` pela API, `Enforce HTTPS`, e trocar o link do cartão no Guia
-   Saúde do provisório para o definitivo (roteiro completo no `CLAUDE.md` do Guia Saúde).
-3. A pasta tem só os dois arquivos que o Paulo colocou em RH; as outras duas categorias estão
-   vazias e por isso não aparecem no site. Ele vai preenchendo; publicar é `node publicar.js` +
-   commit + push.
+- **21/09/2026**: desenho, script, página, repositório e Pages; cartão no Guia Saúde apontando
+  para o provisório.
+- **22/09/2026**: o Paulo entrou no Registro.br e o Claude criou o CNAME `central` →
+  `paulosgp.github.io.` pelo Chrome; DNS respondeu em 8.8.8.8 e 1.1.1.1 no primeiro minuto;
+  `CNAME` no repositório, certificado `approved`, `https_enforced` ligado; cartão do Guia
+  Saúde trocado para o definitivo. Entrou a pré-visualização (acima).
+
+## Pendências
+
+- A pasta tem só os dois arquivos que o Paulo colocou em RH; Ofícios e Formulários estão vazias e
+  por isso não aparecem no site. Ele vai preenchendo; publicar é `node publicar.js` + commit +
+  push.
