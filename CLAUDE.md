@@ -129,3 +129,16 @@ padrão.
 `preview_start` com o nome `central-documentos` (`.claude apps/.claude/launch.json` →
 `.claude/serve-central.js`, porta 4174). É um servidor estático só para o Claude olhar a página;
 não faz parte do site.
+
+## Pendências (22/09/2026)
+
+1. **DNS**: criar o `CNAME` `central` → `paulosgp.github.io.` na zona de
+   `saudesaomateusdosul.com.br`, no Registro.br. O Claude abriu o painel no Chrome do Paulo, mas
+   a sessão estava deslogada e senha é coisa que só ele digita. Assim que ele entrar, o Claude
+   cria o registro pelo Chrome (como fez para o Encaminha em 21/09/2026).
+2. Depois que `nslookup central.saudesaomateusdosul.com.br 8.8.8.8` responder: `CNAME` no
+   repositório, `https_certificate` pela API, `Enforce HTTPS`, e trocar o link do cartão no Guia
+   Saúde do provisório para o definitivo (roteiro completo no `CLAUDE.md` do Guia Saúde).
+3. A pasta tem só os dois arquivos que o Paulo colocou em RH; as outras duas categorias estão
+   vazias e por isso não aparecem no site. Ele vai preenchendo; publicar é `node publicar.js` +
+   commit + push.
