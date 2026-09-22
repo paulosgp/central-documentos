@@ -1,0 +1,24 @@
+CENTRAL DE DOCUMENTOS - o que esta nesta pasta vai para o site
+==============================================================
+
+Endereco: central.saudesaomateusdosul.com.br
+Para publicar o que mudou aqui, pedir ao Claude: "publica a Central de Documentos".
+
+Regras:
+- Cada subpasta desta pasta e uma CATEGORIA do site (RH E SERVIDOR,
+  OFICIOS E MEMORANDOS, FORMULARIOS ASSISTENCIAIS...). Pasta nova = categoria nova.
+- O NOME DO ARQUIVO (sem a extensao) e o titulo que aparece no site.
+  Ex.: "Ficha de solicitacao de ferias.docx" aparece como "Ficha de solicitacao de ferias".
+  Pode usar acento e espaco.
+- Apagou o arquivo daqui, ele some do site na proxima publicacao.
+- Substituiu o arquivo (mesmo nome), o site passa a entregar o novo.
+- O profissional baixa o arquivo exatamente como esta aqui: Word fica Word, PDF fica PDF.
+
+Ignorados na publicacao (o publicador avisa):
+- Este LEIA-ME.txt.
+- Arquivos que comecam com "_" ou "~$" (temporarios do Office).
+- Subpastas DENTRO de uma categoria.
+- Arquivos acima de 95 MB e arquivos vazios.
+
+Lembre: o site e PUBLICO, sem senha. Nao coloque aqui nada com dado de
+paciente ou de servidor (so modelos em branco, fichas, orientacoes).
