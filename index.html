@@ -123,6 +123,29 @@ footer b{color:var(--ink)}
 .atalho p{margin:6px 0 0;font-size:14.5px;line-height:1.5}
 .atalho span{color:var(--chip-ink);font-weight:600}
 @media (prefers-reduced-motion:reduce){.item{transition:none}}
+
+/* A pré-visualização abre AQUI, numa janela sobre a página, e não em aba nova: foi o que o Paulo
+   pediu em 22/09/2026 ("no próprio site, sem precisar abrir uma nova aba"). No celular ocupa a
+   tela inteira; no computador, quase toda. O <dialog> nativo cuida do foco, do Esc e do fundo. */
+dialog.previa{border:0;padding:0;margin:auto;width:min(100vw,1100px);height:100dvh;max-width:100vw;max-height:100dvh;
+  background:var(--card);color:var(--ink);border-radius:0;box-shadow:0 20px 60px rgba(0,0,0,.35);
+  display:none;flex-direction:column;overflow:hidden}
+dialog.previa[open]{display:flex}
+@media (min-width:760px){dialog.previa{width:min(94vw,1100px);height:92dvh;max-height:92dvh;border-radius:16px}}
+dialog.previa::backdrop{background:rgba(10,20,15,.6)}
+.previa-topo{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line);flex:0 0 auto}
+.previa-topo .texto{flex:1;min-width:0}
+.previa-topo .titulo{font-size:16px}
+.previa-topo .meta{font-size:13px}
+.previa-topo .baixar{text-decoration:none}
+.fechar{flex:0 0 auto;width:44px;height:44px;border:1px solid var(--line);background:var(--bg);color:var(--ink);
+  border-radius:999px;font-size:22px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.fechar:hover,.fechar:focus-visible{border-color:var(--verde)}
+.previa-corpo{flex:1;position:relative;background:#e9ece8}
+.previa-corpo iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+.previa-aviso{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:15.5px}
+.previa-aviso a{color:var(--chip-ink);font-weight:600}
+.previa-corpo.carregou .previa-aviso{display:none}
 </style>
 </head>
 <body>
@@ -134,7 +157,7 @@ footer b{color:var(--ink)}
 
   <h1>Central de <span>Documentos</span></h1>
   <div class="linha"></div>
-  <p class="chamada">Modelos, fichas e formulários da Secretaria de Saúde, num lugar só. Toque no <b>nome</b> para ver o documento antes de imprimir, ou em <b>Baixar</b> para salvar no seu celular ou computador.</p>
+  <p class="chamada">Modelos, fichas e formulários da Secretaria de Saúde, num lugar só. Toque no <b>nome</b> para ver o documento aqui mesmo, antes de imprimir, ou em <b>Baixar</b> para salvar no seu celular ou computador.</p>
 
   <div class="busca">
     <label for="q">Buscar documento pelo nome</label>
@@ -144,6 +167,22 @@ footer b{color:var(--ink)}
   <nav class="chips" id="chips" aria-label="Categorias"></nav>
   <div id="conteudo" aria-live="polite"></div>
   <noscript><p class="erro">Esta página precisa de JavaScript para mostrar a lista. Abra no Chrome, no Safari ou no Edge.</p></noscript>
+
+  <dialog class="previa" id="previa" aria-labelledby="previa-titulo">
+    <div class="previa-topo">
+      <span class="icone" id="previa-icone" aria-hidden="true"></span>
+      <span class="texto">
+        <span class="titulo" id="previa-titulo"></span>
+        <span class="meta" id="previa-meta"></span>
+      </span>
+      <a class="baixar" id="previa-baixar" href="#" download><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v12M6 11l6 6 6-6M5 20h14"/></svg><span>Baixar</span></a>
+      <button class="fechar" id="previa-fechar" type="button" aria-label="Fechar">×</button>
+    </div>
+    <div class="previa-corpo" id="previa-corpo">
+      <p class="previa-aviso" id="previa-aviso">Carregando o documento… Se não aparecer, <a id="previa-fora" href="#" target="_blank" rel="noopener">abra em outra aba</a> ou toque em Baixar.</p>
+      <iframe id="previa-quadro" title="Documento"></iframe>
+    </div>
+  </dialog>
 
   <footer>
     <b>Secretaria Municipal da Saúde de São Mateus do Sul — Paraná.</b><br>
@@ -201,7 +240,8 @@ footer b{color:var(--ink)}
   // nada — só funciona porque o site é público (o visualizador busca o arquivo pela URL).
   // Escolhido pelo Paulo em 22/09/2026 no lugar de gerar PDF na publicação. Os demais tipos não
   // têm pré-visualização: o nome baixa, igual ao botão.
-  var VISUALIZADOR_OFFICE = 'https://view.officeapps.live.com/op/view.aspx?src=';
+  // `embed.aspx`, e não `view.aspx`: é a versão feita para <iframe>, sem a barra do Office.
+  var VISUALIZADOR_OFFICE = 'https://view.officeapps.live.com/op/embed.aspx?src=';
   function previa(m, href) {
     if (m.tipo === 'pdf' || m.tipo === 'imagem') return { href: href, download: false };
     if (m.tipo === 'word' || m.tipo === 'excel' || m.tipo === 'powerpoint') {
@@ -211,12 +251,38 @@ footer b{color:var(--ink)}
     return { href: href, download: true };
   }
 
+  // A janela de pré-visualização: uma só, reaproveitada. Ao fechar, o iframe é esvaziado para
+  // parar de carregar e não mostrar o documento anterior por um instante na próxima abertura.
+  var dlg = $('previa'), quadro = $('previa-quadro'), corpo = $('previa-corpo');
+  function abrirPrevia(m, href, urlPrevia) {
+    $('previa-icone').className = 'icone ' + m.tipo; $('previa-icone').textContent = SIGLA[m.tipo] || '…';
+    $('previa-titulo').textContent = m.titulo;
+    $('previa-meta').textContent = (ROTULO[m.tipo] || 'Arquivo') + ' · ' + tamanho(m.tamanho) + ' · ' + dataBR(m.atualizadoEm);
+    $('previa-baixar').setAttribute('href', href);
+    $('previa-fora').setAttribute('href', urlPrevia);
+    corpo.classList.remove('carregou');
+    quadro.src = urlPrevia;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else window.open(urlPrevia, '_blank');
+  }
+  function fecharPrevia() { quadro.src = 'about:blank'; if (dlg.open) dlg.close(); }
+  quadro.addEventListener('load', function () { if (quadro.src && quadro.src !== 'about:blank') corpo.classList.add('carregou'); });
+  $('previa-fechar').addEventListener('click', fecharPrevia);
+  dlg.addEventListener('close', fecharPrevia);
+  dlg.addEventListener('click', function (e) { if (e.target === dlg) fecharPrevia(); }); // toque no fundo escuro
+
   function item(m) {
     // encodeURI: o caminho vem com espaço e acento, do jeito que o arquivo se chama na pasta.
     var href = encodeURI(m.arquivo);
     var p = previa(m, href);
     var ver = el('a', { class: 'ver', href: p.href, title: p.download ? 'Baixar' : 'Ver o documento' });
-    if (p.download) ver.setAttribute('download', ''); else { ver.setAttribute('target', '_blank'); ver.setAttribute('rel', 'noopener'); }
+    if (p.download) ver.setAttribute('download', '');
+    else {
+      ver.setAttribute('target', '_blank'); ver.setAttribute('rel', 'noopener'); // só para ctrl+clique / clique do meio
+      ver.addEventListener('click', function (e) {
+        if (e.ctrlKey || e.metaKey || e.shiftKey || e.button === 1) return;
+        e.preventDefault(); abrirPrevia(m, href, p.href);
+      });
+    }
     ver.appendChild(el('span', { class: 'icone ' + m.tipo, text: SIGLA[m.tipo] || '…', 'aria-hidden': 'true' }));
     ver.appendChild(el('span', { class: 'texto' }, [
       el('span', { class: 'titulo', text: m.titulo }),

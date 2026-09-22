@@ -99,16 +99,24 @@ padrão.
   `MATERIAIS%20PUBLICADOS/RH%20E%20SERVIDOR/Ficha%20de%20f%C3%A9rias.docx` é feio mas correto,
   e ninguém compartilha o link do arquivo — compartilha a página (ou a categoria, por âncora).
 - **Pré-visualização (22/09/2026).** O Paulo perguntou se dava para ver o arquivo antes de
-  imprimir. O nome do material abre a pré-visualização em aba nova e o botão Baixar continua
-  salvando o original (dois links irmãos na linha; anchor aninhado não existe em HTML). PDF e
+  imprimir — e, na primeira versão (aba nova), corrigiu: *"no próprio site, sem precisar abrir
+  uma nova aba"*. O nome do material abre um `<dialog>` sobre a página (tela inteira no celular,
+  92% no computador) com um `<iframe>`, o Baixar e o Fechar no topo; o botão Baixar da linha
+  continua salvando o original (dois links irmãos na linha; anchor aninhado não existe em HTML).
+  Ctrl+clique ainda abre em aba nova, e dentro da janela há um link "abra em outra aba" para
+  quando o iframe não carregar. Ao fechar, o iframe vai para `about:blank` (para de carregar e
+  não mostra o documento anterior na próxima abertura). PDF e
   imagem o navegador mostra sozinho. **Word, Excel e PowerPoint vão ao visualizador online do
-  Office** (`view.officeapps.live.com/op/view.aspx?src=<URL absoluta>`), que renderiza com
+  Office** (`view.officeapps.live.com/op/embed.aspx?src=<URL absoluta>` — `embed`, e não `view`: é a
+  versão feita para iframe, sem a barra do Office), que renderiza com
   fidelidade, no celular, sem instalar nada — e só funciona porque o site é público (o
   visualizador busca o arquivo pela URL; em `localhost` ele não abre, de propósito). Ele
   escolheu isso, e não gerar PDF na publicação com o Word desta máquina (mais robusto, mas a
   publicação passaria a depender do Word e cada material viraria dois arquivos). Se a Microsoft
   desligar o visualizador, o caminho B está no plano: converter com o Word ao publicar. Tipos sem
-  pré-visualização (`outro`) baixam pelo nome também.
+  pré-visualização (`outro`) baixam pelo nome também. **PDF e imagem vão direto no iframe**: no
+  computador o navegador renderiza; em Android o Chrome pode oferecer download em vez de mostrar —
+  limitação conhecida, e o link "abra em outra aba" cobre. Hoje não há PDF na pasta.
 - **`.nojekyll` na raiz.** Sem ele, o Jekyll do Pages ignora nomes que começam com `_` e pode
   processar o restante.
 - **`<a download>` na linha inteira.** O atributo faz o navegador salvar em vez de tentar abrir
