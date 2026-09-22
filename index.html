@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Modelos, fichas e formulários da Secretaria Municipal da Saúde de São Mateus do Sul, para baixar: memorando, solicitação de férias, ponto manual, formulários assistenciais.">
+<meta name="theme-color" content="#0e8c4a">
+<link rel="icon" href="favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/svg+xml" href="logo-central.svg">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Central de Documentos — SMS São Mateus do Sul">
+<meta property="og:description" content="Modelos, fichas e formulários da Secretaria de Saúde. Toque para baixar.">
+<meta property="og:image" content="https://central.saudesaomateusdosul.com.br/logo-sms.png">
+<meta property="og:url" content="https://central.saudesaomateusdosul.com.br/">
+<meta property="og:locale" content="pt_BR">
+<title>Central de Documentos</title>
+<style>
+/* Fontes locais, como no Guia Saúde: nos postos com sinal ruim, buscar no Google custava duas
+   conexões antes de o texto assentar. Subconjunto latino, licença SIL OFL. */
+@font-face{font-family:'Archivo';font-style:normal;font-weight:600 700;font-stretch:100%;
+  font-display:swap;src:url(fontes/archivo-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2122,U+2191,U+2193,U+2212,U+FEFF,U+FFFD}
+@font-face{font-family:'Source Sans 3';font-style:normal;font-weight:400 600;
+  font-display:swap;src:url(fontes/sourcesans3-latin.woff2) format('woff2');
+  unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2122,U+2191,U+2193,U+2212,U+FEFF,U+FFFD}
+
+/* Cores do logotipo da Secretaria (verde do "SAÚDE", azul do "SECRETARIA DE"), iguais ao Guia Saúde.
+   As cores por tipo de arquivo são as que o Office e o Acrobat já ensinaram a todo mundo. */
+:root{
+  color-scheme:light dark;
+  --verde:#0e8c4a; --verde-forte:#0a6e3a; --azul:#1a5fa8;
+  --bg:#f4f6f3; --ink:#16211c; --muted:#5b6a62; --line:#dde2dc; --card:#ffffff;
+  --chip:#e8f2eb; --chip-ink:#0a6e3a; --sombra:0 1px 2px rgba(20,40,30,.06),0 8px 24px rgba(20,40,30,.06);
+  --word:#2b579a; --excel:#217346; --powerpoint:#d24726; --pdf:#c62828; --imagem:#6a1b9a; --outro:#5b6a62;
+  --erro-borda:#e0a0a0; --erro-ink:#8a2a2a;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --verde:#5cc98d; --verde-forte:#7ad6a3; --azul:#7fb2ea;
+  --bg:#101512; --ink:#e9efea; --muted:#93a29a; --line:#27322c; --card:#182019;
+  --chip:#16301f; --chip-ink:#7ad6a3; --sombra:none; --erro-borda:#7a3a3a; --erro-ink:#f0b0b0;
+}}
+:root[data-theme="dark"]{
+  --verde:#5cc98d; --verde-forte:#7ad6a3; --azul:#7fb2ea;
+  --bg:#101512; --ink:#e9efea; --muted:#93a29a; --line:#27322c; --card:#182019;
+  --chip:#16301f; --chip-ink:#7ad6a3; --sombra:none; --erro-borda:#7a3a3a; --erro-ink:#f0b0b0;
+}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);margin:0;padding:0;
+  font:17px/1.55 "Source Sans 3","Segoe UI",system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+main{max-width:860px;margin:0 auto;padding:28px 16px 64px}
+
+.marca{display:inline-flex;align-items:center;flex-wrap:wrap;gap:10px 24px;line-height:0;margin-bottom:22px}
+.marca img{height:clamp(40px,8.6vw,56px);width:auto;display:block}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .marca{background:#fff;padding:12px 16px;border-radius:14px}}
+:root[data-theme="dark"] .marca{background:#fff;padding:12px 16px;border-radius:14px}
+
+h1{font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-weight:700;font-size:clamp(34px,7vw,50px);
+  line-height:1.02;letter-spacing:-.025em;margin:0 0 10px}
+h1 span{color:var(--verde)}
+.linha{width:64px;height:4px;background:var(--verde);border-radius:2px;margin:16px 0 14px}
+.chamada{font-size:clamp(17px,2.2vw,19px);color:var(--muted);max-width:56ch;margin:0 0 20px}
+
+/* A busca fica grudada no topo ao rolar: com dezenas de arquivos, é o que evita voltar lá em cima. */
+.busca{position:sticky;top:0;z-index:2;background:var(--bg);padding:8px 0 12px}
+.busca label{position:absolute;left:-9999px}
+.busca input{width:100%;font:inherit;font-size:18px;color:var(--ink);background:var(--card);
+  border:1.5px solid var(--line);border-radius:14px;padding:14px 16px 14px 46px;outline:none;
+  box-shadow:var(--sombra);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%235b6a62' stroke-width='2.2' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='m20 20-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;background-position:15px center;background-size:20px}
+.busca input:focus{border-color:var(--verde)}
+
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 8px}
+.chips a{display:inline-flex;align-items:center;min-height:36px;background:var(--chip);color:var(--chip-ink);
+  font-weight:600;font-size:14.5px;text-decoration:none;padding:4px 14px;border-radius:999px;
+  border:1px solid transparent}
+.chips a:hover,.chips a:focus-visible{border-color:var(--verde)}
+.chips small{font-weight:400;margin-left:6px;opacity:.8}
+
+h2{font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-weight:600;font-size:13px;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:28px 0 10px;scroll-margin-top:84px}
+h2 small{letter-spacing:0;text-transform:none;font-weight:400;margin-left:8px}
+
+.lista{display:flex;flex-direction:column;gap:8px;list-style:none;margin:0;padding:0}
+/* Uma linha por arquivo, 56 px no mínimo: o alvo de toque no celular. A linha inteira é o link,
+   com `download`: o navegador salva em vez de tentar abrir o .docx. */
+.item{display:flex;align-items:center;gap:12px;min-height:56px;background:var(--card);
+  border:1px solid var(--line);border-radius:14px;padding:10px 12px;text-decoration:none;
+  color:inherit;box-shadow:var(--sombra);transition:border-color .14s ease}
+.item:hover,.item:focus-visible{border-color:var(--verde)}
+.item:focus-visible{outline:3px solid var(--verde);outline-offset:3px}
+.icone{width:40px;height:40px;flex:0 0 auto;border-radius:10px;display:grid;place-items:center;
+  color:#fff;font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-weight:700;font-size:12px;letter-spacing:.02em}
+.icone.word{background:var(--word)}.icone.excel{background:var(--excel)}.icone.powerpoint{background:var(--powerpoint)}
+.icone.pdf{background:var(--pdf)}.icone.imagem{background:var(--imagem)}.icone.outro{background:var(--outro)}
+.texto{flex:1;min-width:0}
+.titulo{display:block;font-weight:600;font-size:17px;line-height:1.3;overflow-wrap:anywhere}
+.meta{display:block;font-size:13.5px;color:var(--muted);margin-top:2px}
+.baixar{flex:0 0 auto;display:inline-flex;align-items:center;gap:6px;background:var(--verde);color:#fff;
+  font-weight:700;font-size:14.5px;padding:9px 14px;border-radius:999px}
+.baixar svg{width:16px;height:16px}
+@media (max-width:420px){.baixar span{display:none}.baixar{padding:9px 11px}}
+
+.vazio,.erro{background:var(--card);border:1px dashed var(--line);border-radius:14px;padding:18px;color:var(--muted);margin-top:16px}
+.erro{border-style:solid;border-color:var(--erro-borda);color:var(--erro-ink)}
+[hidden]{display:none!important}
+
+footer{margin-top:52px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+footer b{color:var(--ink)}
+.zap{display:inline-flex;align-items:center;gap:8px;margin-top:10px;background:var(--chip);
+  color:var(--chip-ink);font-weight:600;font-size:15px;text-decoration:none;
+  padding:8px 14px;border-radius:999px;border:1px solid transparent}
+.zap:hover,.zap:focus-visible{border-color:var(--verde)}
+.zap svg{width:17px;height:17px;flex:0 0 auto}
+.atalho{margin-top:26px;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:14px;max-width:62ch}
+.atalho b{display:block;font-family:Archivo,"Segoe UI",system-ui,sans-serif;font-size:16px;color:var(--ink);margin-bottom:6px}
+.atalho p{margin:6px 0 0;font-size:14.5px;line-height:1.5}
+.atalho span{color:var(--chip-ink);font-weight:600}
+@media (prefers-reduced-motion:reduce){.item{transition:none}}
+</style>
+</head>
+<body>
+<main>
+  <span class="marca">
+    <img src="logo-prefeitura.png" alt="Prefeitura de São Mateus do Sul" width="345" height="100">
+    <img src="logo-sms.png" alt="Secretaria de Saúde — São Mateus do Sul" width="673" height="202">
+  </span>
+
+  <h1>Central de <span>Documentos</span></h1>
+  <div class="linha"></div>
+  <p class="chamada">Modelos, fichas e formulários da Secretaria de Saúde, num lugar só. Toque em <b>Baixar</b> e o arquivo vai para o seu celular ou computador.</p>
+
+  <div class="busca">
+    <label for="q">Buscar documento pelo nome</label>
+    <input id="q" type="search" placeholder="Buscar pelo nome: férias, memorando…" autocomplete="off" hidden>
+  </div>
+
+  <nav class="chips" id="chips" aria-label="Categorias"></nav>
+  <div id="conteudo" aria-live="polite"></div>
+  <noscript><p class="erro">Esta página precisa de JavaScript para mostrar a lista. Abra no Chrome, no Safari ou no Edge.</p></noscript>
+
+  <footer>
+    <b>Secretaria Municipal da Saúde de São Mateus do Sul — Paraná.</b><br>
+    <span id="atualizado"></span>Para incluir ou corrigir um documento, fale com a coordenação da Atenção Primária.<br>
+    <a class="zap" href="https://wa.me/5542988724354" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      WhatsApp (42) 98872-4354
+    </a>
+    <div class="atalho">
+      <b>Coloque na tela do seu celular</b>
+      <p><span>No Android:</span> abra esta página no Chrome, toque nos três pontinhos do canto e escolha <b style="display:inline;font-size:inherit">Adicionar à tela inicial</b>.</p>
+      <p><span>No iPhone:</span> abra no Safari, toque no quadradinho com a seta para cima e escolha <b style="display:inline;font-size:inherit">Adicionar à Tela de Início</b>.</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+(function () {
+  'use strict';
+  var ROTULO = { word: 'Word', excel: 'Excel', powerpoint: 'PowerPoint', pdf: 'PDF', imagem: 'Imagem', outro: 'Arquivo' };
+  var SIGLA = { word: 'W', excel: 'X', powerpoint: 'P', pdf: 'PDF', imagem: 'IMG', outro: '…' };
+  var $ = function (id) { return document.getElementById(id); };
+  var conteudo = $('conteudo'), chips = $('chips'), campo = $('q'), atualizado = $('atualizado');
+  var dados = null;
+
+  function normalizar(s) {
+    return s.normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase();
+  }
+  function tamanho(bytes) {
+    if (bytes < 1024) return bytes + ' B';
+    if (bytes < 1024 * 1024) return Math.round(bytes / 1024) + ' KB';
+    return (bytes / 1024 / 1024).toFixed(1).replace('.', ',') + ' MB';
+  }
+  function dataBR(iso) { // AAAA-MM-DD → DD/MM/AAAA
+    var p = iso.split('-'); return p[2] + '/' + p[1] + '/' + p[0];
+  }
+  function el(tag, attrs, filhos) {
+    var e = document.createElement(tag);
+    for (var k in attrs) { if (k === 'text') e.textContent = attrs[k]; else e.setAttribute(k, attrs[k]); }
+    (filhos || []).forEach(function (f) { e.appendChild(f); });
+    return e;
+  }
+  function svgSeta() {
+    var ns = 'http://www.w3.org/2000/svg';
+    var s = document.createElementNS(ns, 'svg');
+    s.setAttribute('viewBox', '0 0 24 24'); s.setAttribute('fill', 'none'); s.setAttribute('stroke', 'currentColor');
+    s.setAttribute('stroke-width', '2.6'); s.setAttribute('stroke-linecap', 'round'); s.setAttribute('stroke-linejoin', 'round');
+    s.setAttribute('aria-hidden', 'true');
+    var p = document.createElementNS(ns, 'path');
+    p.setAttribute('d', 'M12 4v12M6 11l6 6 6-6M5 20h14'); s.appendChild(p); return s;
+  }
+
+  function item(m) {
+    // encodeURI: o caminho vem com espaço e acento, do jeito que o arquivo se chama na pasta.
+    var a = el('a', { class: 'item', href: encodeURI(m.arquivo), download: '' });
+    a.appendChild(el('span', { class: 'icone ' + m.tipo, text: SIGLA[m.tipo] || '…', 'aria-hidden': 'true' }));
+    a.appendChild(el('span', { class: 'texto' }, [
+      el('span', { class: 'titulo', text: m.titulo }),
+      el('span', { class: 'meta', text: (ROTULO[m.tipo] || 'Arquivo') + ' · ' + tamanho(m.tamanho) + ' · ' + dataBR(m.atualizadoEm) })
+    ]));
+    a.appendChild(el('span', { class: 'baixar' }, [svgSeta(), el('span', { text: 'Baixar' })]));
+    return a;
+  }
+
+  function render(filtro) {
+    conteudo.textContent = '';
+    var q = normalizar(filtro || '').trim();
+    var total = 0;
+    dados.categorias.forEach(function (c) {
+      var lista = c.materiais.filter(function (m) { return !q || normalizar(m.titulo).indexOf(q) !== -1; });
+      if (!lista.length) return;
+      total += lista.length;
+      var sec = el('section', { id: c.id });
+      sec.appendChild(el('h2', { text: c.nome }, [el('small', { text: lista.length === 1 ? '1 documento' : lista.length + ' documentos' })]));
+      var ul = el('ul', { class: 'lista' });
+      lista.forEach(function (m) { ul.appendChild(el('li', {}, [item(m)])); });
+      sec.appendChild(ul);
+      conteudo.appendChild(sec);
+    });
+    if (!total) {
+      conteudo.appendChild(el('p', { class: 'vazio', text: q
+        ? 'Nada com esse nome. Fale com a coordenação da APS se precisar de um documento que não está aqui.'
+        : 'Ainda não há documentos publicados.' }));
+    }
+  }
+
+  function renderChips() {
+    chips.textContent = '';
+    dados.categorias.forEach(function (c) {
+      chips.appendChild(el('a', { href: '#' + c.id, text: c.nome }, [el('small', { text: String(c.materiais.length) })]));
+    });
+  }
+
+  function carregar() {
+    fetch('materiais.json', { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+      .then(function (json) {
+        dados = json;
+        if (dados.categorias.length) { campo.hidden = false; renderChips(); }
+        render('');
+        if (json.geradoEm) atualizado.textContent = 'Lista atualizada em ' + dataBR(json.geradoEm.slice(0, 10)) + '. ';
+        if (location.hash) { var alvo = document.getElementById(location.hash.slice(1)); if (alvo) alvo.scrollIntoView(); }
+      })
+      .catch(function () {
+        conteudo.textContent = '';
+        conteudo.appendChild(el('p', { class: 'erro', text: 'Não deu para carregar a lista. Tente de novo em instantes.' }));
+      });
+  }
+
+  campo.addEventListener('input', function () { render(campo.value); });
+  carregar();
+})();
+</script>
+</body>
+</html>
