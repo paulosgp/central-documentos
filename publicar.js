@@ -14,11 +14,12 @@ const LIMITE_BYTES = 95 * 1024 * 1024; // o GitHub recusa arquivo acima de 100 M
 // com o nome da pasta como está — categoria nova não exige mexer aqui.
 const NOMES = new Map([
   ['RH E SERVIDOR', 'RH e servidor'],
-  ['OFICIOS E MEMORANDOS', 'Ofícios e memorandos'],
+  ['OFICIOS E MEMORANDOS', 'Ofícios, memorandos e atas'],
   ['FORMULARIOS ASSISTENCIAIS', 'Formulários assistenciais'],
   ['ESTRATIFICAÇÕES DE RISCO', 'Estratificações de risco'],
   ['ANEXOS ADMINISTRATIVO', 'Anexos administrativos'],
   ['INDICADORES APS', 'Indicadores da APS (fichas técnicas do Ministério)'],
+  ['CONDUTAS CLINICAS', 'Condutas clínicas'],
 ]);
 
 const TIPOS = {

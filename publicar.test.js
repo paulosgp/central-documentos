@@ -32,7 +32,7 @@ test('idCategoria: slug ASCII sem acento', () => {
 
 test('nomeCategoria: mapa fixo para as conhecidas, pasta como está para as outras', () => {
   assert.equal(P.nomeCategoria('RH E SERVIDOR'), 'RH e servidor');
-  assert.equal(P.nomeCategoria('OFICIOS E MEMORANDOS'), 'Ofícios e memorandos');
+  assert.equal(P.nomeCategoria('OFICIOS E MEMORANDOS'), 'Ofícios, memorandos e atas');
   assert.equal(P.nomeCategoria('FORMULARIOS ASSISTENCIAIS'), 'Formulários assistenciais');
   assert.equal(P.nomeCategoria('Saúde Bucal'), 'Saúde Bucal');
 });

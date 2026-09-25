@@ -23,5 +23,8 @@ Ignorados na publicacao (o publicador avisa):
 - Subpastas DENTRO de uma categoria.
 - Arquivos acima de 95 MB e arquivos vazios.
 
+Antes de publicar, o Claude confere cada arquivo e APAGA dado pessoal que
+encontrar (nome de paciente, CPF, conta bancaria, matricula preenchida),
+deixando o modelo em branco. Mesmo assim:
 Lembre: o site e PUBLICO, sem senha. Nao coloque aqui nada com dado de
 paciente ou de servidor (so modelos em branco, fichas, orientacoes).

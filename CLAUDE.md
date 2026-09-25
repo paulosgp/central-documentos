@@ -57,7 +57,8 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
   `FORMULARIOS ASSISTENCIAIS` → "Formulários assistenciais", e desde 22/09/2026 as duas que o
   Paulo criou: `ESTRATIFICAÇÕES DE RISCO` → "Estratificações de risco", `ANEXOS ADMINISTRATIVO`
   → "Anexos administrativos", e desde 25/09/2026 `INDICADORES APS` → "Indicadores da APS (fichas
-  técnicas do Ministério)"); pasta fora do mapa entra depois, em ordem alfabética, com o nome
+  técnicas do Ministério)" e `CONDUTAS CLINICAS` → "Condutas clínicas"; também em 25/09,
+  `OFICIOS E MEMORANDOS` passou a aparecer como "Ofícios, memorandos e atas", quando entrou a ata); pasta fora do mapa entra depois, em ordem alfabética, com o nome
   da pasta como está — o que, para pasta em maiúsculas, fica gritado ("ANEXOS ADMINISTRATIVO" foi
   assim na primeira publicação); quando ele criar pasta nova, acrescentar ao mapa.
 - **Nome do arquivo sem extensão = título** exibido. Acento e espaço podem.
@@ -79,6 +80,50 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
 
 A pasta `ESF\MATERIAIS UTEIS` não tem relação: é um depósito de material da 6ª Regional
 (517 MB, fotos, vídeo, zips), sem curadoria.
+
+## Nada pessoal vai ao ar: conferir TODO arquivo antes de publicar (regra do Paulo, 25/09/2026)
+
+O site é público e o repositório também. O Paulo pediu duas vezes no mesmo dia, para os arquivos que
+ia pondo na pasta: *"se tiver alguma informação sensível nos documentos, apague"*. Vale como regra
+permanente: **a cada publicação, antes do `node publicar.js`, ler o conteúdo de todo arquivo novo ou
+alterado** e limpar o que for dado pessoal. Não é zelo teórico: dos 36 arquivos de 25/09, **quatro
+vieram preenchidos com gente de verdade**:
+
+| Arquivo | O que tinha |
+|---|---|
+| Estratificação de saúde mental (.xls) | **Uma paciente do CAPS**: nome completo, profissional, data e os 12 sintomas marcados, com escore 42 ("médio risco"). Dado de saúde mental: o pior caso da LGPD. Chegou nesse dia e não chegou a ir ao ar. |
+| AVS e Relatório de viagem (.docx) | Os dados do próprio Paulo: **CPF, matrícula, conta bancária** e a viagem de 10/09 a União da Vitória. Saem assim das skills `preencher-avs` e `preencher-relatorio-viagem`, que já vêm com os dados dele. Também não chegaram a ir ao ar. |
+| Anexo II, Termo de indicação de gestor e fiscal (.docx) | Duas servidoras com **nome e matrícula**, o e-mail de uma delas e um contrato específico. **Este estava no ar desde 22/09.** |
+
+Além disso, quase todo `.docx` e `.xls` trazia nos **metadados** o nome de quem criou e de quem salvou
+por último (servidoras do RH e do planejamento), que qualquer um vê em "Propriedades do arquivo".
+
+**Como limpar sem estragar o modelo** (tudo pelo Word e pelo Excel desta máquina, via COM no
+PowerShell, porque mexer no XML à mão quebra formatação):
+- **Texto preenchido** vira linha em branco (`______`) por *Localizar e substituir* do próprio Word,
+  que acha o texto mesmo partido em vários trechos de formatação. O valor da tabela oficial (diária
+  de R$ 42,00, R$ 210,00) fica: é tabela, não dado de ninguém.
+- **Planilha preenchida**: limpar as células de entrada e **voltar as respostas ao padrão do
+  modelo**. Na de saúde mental, o padrão é "N" em tudo, e isso se descobre olhando as outras abas,
+  que estavam em branco. Cuidado com célula mesclada: `MergeArea.ClearContents()`, senão o Excel
+  recusa.
+- **Metadados**: `RemoveDocumentInformation(4)` e `(8)` (dados pessoais e propriedades) no Word e no
+  Excel. Não usar `(99)`, "tudo", que também mexe em revisões e comentários.
+- **PDF**: `pdftotext` lê o texto; campos de formulário preenchidos só aparecem pelo pdf.js
+  (`getAnnotations`, com `fieldValue`). PDF que é só desenho, sem texto (feito por "Imprimir como
+  PDF"), precisa ser **olhado**: renderizar a página com o motor de PDF do Windows
+  (`Windows.Data.Pdf` pelo PowerShell) e ver a imagem. O painel de navegador do Claude baixa PDF em
+  vez de mostrar, e com o painel oculto o pdf.js nem desenha.
+- **Arquivo `.xls` antigo**: o texto extraído do binário é lixo; ler célula por célula pelo Excel, em
+  modo somente leitura, e só então decidir.
+- **Depois de limpar, reler tudo** procurando os nomes e números achados: um resto nos metadados
+  (a escala ainda tinha o nome do Paulo no "último a salvar") só apareceu na segunda passada.
+
+**O que continua no histórico do Git.** Tirar o arquivo ou limpar o texto não apaga as versões já
+enviadas: o repositório é público, e a versão do Termo com as duas servidoras está nos commits de
+22/09 a 25/09. Apagar de lá exige reescrever o histórico e forçar o envio (`git filter-repo` +
+`push --force`), o que é irreversível e mexe no espelho `paulosgp/apps`. **Não foi feito sem o
+Paulo decidir.** Por isso a conferência tem de vir ANTES da primeira publicação, não depois.
 
 ## Como publicar
 
@@ -181,6 +226,21 @@ não faz parte do site.
   recriada); a **requisição de EPI** foi para `RH E SERVIDOR` (é pedida pelo servidor, com nome
   e matrícula). Dois nomes corrigidos: "Relatorio de Oxigenio Mensal (1)" (o "(1)" é sobra de
   download) e "Termo Laqueadura". Ficaram 25 materiais em 5 categorias.
+- **25/09/2026 (tarde)**: mais 8 arquivos; cinco estratificações de risco foram para a pasta que
+  esperava vazia, e as condutas do citopatológico abriram `CONDUTAS CLINICAS` ("Condutas clínicas").
+  O AVS e o relatório de viagem viraram modelos em branco em `RH E SERVIDOR`. A conferência de dado
+  pessoal (seção acima) passou a ser regra. Entrou a **Ata de reunião** em `OFICIOS E MEMORANDOS`,
+  cuja categoria passou a se chamar "Ofícios, memorandos e atas" (abaixo). Ficaram 34 materiais em
+  7 categorias.
+- **A Ata de reunião foi feita pelo Claude**, a pedido do Paulo ("um modelo de ATA de reuniões do
+  município com espaço para assinaturas"). Parte do `Anexo VI - Memorando.docx`, copiado e com o
+  corpo trocado, para herdar sem esforço o cabeçalho com o brasão, o rodapé com o endereço da
+  Secretaria, Arial 12 e as margens oficiais (3 cm à esquerda, 2 cm nas demais). Três páginas:
+  identificação (data, horário, local, unidade, tipo, quem conduz, quem redige) e pauta; registro,
+  deliberações com responsável e prazo, encerramento com o texto formal de ata e as assinaturas de
+  quem conduziu e de quem redigiu; e a lista de presença em página própria, 20 linhas, cabeçalho
+  repetido se passar de página. Parágrafos de preencher ficaram alinhados à esquerda, e não
+  justificados: justificado, cada lacuna `______` abria buracos no meio da linha.
 
 ## Pendências
 

@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-25T03:38:09.942Z",
+  "geradoEm": "2026-09-25T04:48:32.140Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -9,77 +9,98 @@
           "titulo": "Anexo IV - PONTO MANUAL",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo IV - PONTO MANUAL.docx",
           "tipo": "word",
-          "tamanho": 201350,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 201434,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS.docx",
           "tipo": "word",
-          "tamanho": 77842,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 77953,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "AVS - Autorização de viagem a serviço",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/AVS - Autorização de viagem a serviço.docx",
+          "tipo": "word",
+          "tamanho": 138603,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "DADOS PARA O CONTRATO DE ESTÁGIO",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DADOS PARA O CONTRATO DE ESTÁGIO.docx",
           "tipo": "word",
-          "tamanho": 15931,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 15680,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR.docx",
           "tipo": "word",
-          "tamanho": 16631,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 17102,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "escala_setembro_2026",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/escala_setembro_2026.xlsx",
           "tipo": "excel",
-          "tamanho": 11764,
-          "atualizadoEm": "2026-09-22"
+          "tamanho": 11897,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "FICHA EPI 2026 modelo novo",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FICHA EPI 2026 modelo novo.docx",
           "tipo": "word",
-          "tamanho": 77236,
+          "tamanho": 76396,
           "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "FORMULARIO HORA EXTRA",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FORMULARIO HORA EXTRA.docx",
           "tipo": "word",
-          "tamanho": 97883,
-          "atualizadoEm": "2026-09-22"
+          "tamanho": 97965,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "PLANILHA AUT. H.E.",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/PLANILHA AUT. H.E..docx",
           "tipo": "word",
-          "tamanho": 119233,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 119699,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Relatório de viagem",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Relatório de viagem.docx",
+          "tipo": "word",
+          "tamanho": 97773,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS.docx",
           "tipo": "word",
-          "tamanho": 109093,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 111405,
+          "atualizadoEm": "2026-09-25"
         }
       ]
     },
     {
       "id": "oficios-e-memorandos",
-      "nome": "Ofícios e memorandos",
+      "nome": "Ofícios, memorandos e atas",
       "materiais": [
         {
           "titulo": "Anexo VI - Memorando",
           "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Anexo VI - Memorando.docx",
           "tipo": "word",
-          "tamanho": 75418,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 74849,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Ata de reunião",
+          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Ata de reunião.docx",
+          "tipo": "word",
+          "tamanho": 78937,
+          "atualizadoEm": "2026-09-25"
         }
       ]
     },
@@ -111,15 +132,56 @@
       ]
     },
     {
+      "id": "estratificacoes-de-risco",
+      "nome": "Estratificações de risco",
+      "materiais": [
+        {
+          "titulo": "Estratificação de risco - Criança",
+          "arquivo": "MATERIAIS PUBLICADOS/ESTRATIFICAÇÕES DE RISCO/Estratificação de risco - Criança.docx",
+          "tipo": "word",
+          "tamanho": 93272,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Estratificação de risco - Diabetes",
+          "arquivo": "MATERIAIS PUBLICADOS/ESTRATIFICAÇÕES DE RISCO/Estratificação de risco - Diabetes.pdf",
+          "tipo": "pdf",
+          "tamanho": 164411,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Estratificação de risco - Gestante",
+          "arquivo": "MATERIAIS PUBLICADOS/ESTRATIFICAÇÕES DE RISCO/Estratificação de risco - Gestante.docx",
+          "tipo": "word",
+          "tamanho": 1949810,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Estratificação de risco - Hipertensão (CISVALI, editável)",
+          "arquivo": "MATERIAIS PUBLICADOS/ESTRATIFICAÇÕES DE RISCO/Estratificação de risco - Hipertensão (CISVALI, editável).pdf",
+          "tipo": "pdf",
+          "tamanho": 740821,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Estratificação de risco - Saúde mental",
+          "arquivo": "MATERIAIS PUBLICADOS/ESTRATIFICAÇÕES DE RISCO/Estratificação de risco - Saúde mental.xls",
+          "tipo": "excel",
+          "tamanho": 412672,
+          "atualizadoEm": "2026-09-25"
+        }
+      ]
+    },
+    {
       "id": "anexos-administrativo",
       "nome": "Anexos administrativos",
       "materiais": [
         {
-          "titulo": "Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR - 1.2023",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR - 1.2023.docx",
+          "titulo": "Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR.docx",
           "tipo": "word",
-          "tamanho": 198430,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 199902,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "Anexo III - MODELO COTAÇÃO",
@@ -132,22 +194,22 @@
           "titulo": "Anexo IV - Solicitação de consertos",
           "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo IV - Solicitação de consertos.docx",
           "tipo": "word",
-          "tamanho": 198622,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 199072,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "Anexo V - Pedidos materiais e outros",
           "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo V - Pedidos materiais e outros.docx",
           "tipo": "word",
-          "tamanho": 210922,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 211127,
+          "atualizadoEm": "2026-09-25"
         },
         {
           "titulo": "Anexo VI - Check list veículos",
           "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo VI - Check list veículos.xls",
           "tipo": "excel",
-          "tamanho": 236032,
-          "atualizadoEm": "2026-08-30"
+          "tamanho": 219648,
+          "atualizadoEm": "2026-09-25"
         }
       ]
     },
@@ -202,6 +264,19 @@
           "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C7 - Cuidado da mulher na prevenção do câncer.pdf",
           "tipo": "pdf",
           "tamanho": 550921,
+          "atualizadoEm": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "condutas-clinicas",
+      "nome": "Condutas clínicas",
+      "materiais": [
+        {
+          "titulo": "Citopatológico - condutas diante do resultado",
+          "arquivo": "MATERIAIS PUBLICADOS/CONDUTAS CLINICAS/Citopatológico - condutas diante do resultado.pdf",
+          "tipo": "pdf",
+          "tamanho": 337019,
           "atualizadoEm": "2026-09-25"
         }
       ]
