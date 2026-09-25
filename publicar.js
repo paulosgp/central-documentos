@@ -18,6 +18,7 @@ const NOMES = new Map([
   ['FORMULARIOS ASSISTENCIAIS', 'Formulários assistenciais'],
   ['ESTRATIFICAÇÕES DE RISCO', 'Estratificações de risco'],
   ['ANEXOS ADMINISTRATIVO', 'Anexos administrativos'],
+  ['INDICADORES APS', 'Indicadores da APS (fichas técnicas do Ministério)'],
 ]);
 
 const TIPOS = {

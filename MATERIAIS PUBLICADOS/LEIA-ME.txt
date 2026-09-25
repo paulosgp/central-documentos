@@ -10,6 +10,9 @@ Regras:
 - O NOME DO ARQUIVO (sem a extensao) e o titulo que aparece no site.
   Ex.: "Ficha de solicitacao de ferias.docx" aparece como "Ficha de solicitacao de ferias".
   Pode usar acento e espaco.
+- Nao sabe em qual categoria o documento se encaixa? Deixe solto aqui na
+  pasta principal e peca ao Claude para organizar. Arquivo solto NAO aparece
+  no site ate ser colocado numa categoria.
 - Apagou o arquivo daqui, ele some do site na proxima publicacao.
 - Substituiu o arquivo (mesmo nome), o site passa a entregar o novo.
 - O profissional baixa o arquivo exatamente como esta aqui: Word fica Word, PDF fica PDF.

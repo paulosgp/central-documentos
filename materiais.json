@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-22T03:16:44.859Z",
+  "geradoEm": "2026-09-25T03:38:09.942Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -41,6 +41,13 @@
           "atualizadoEm": "2026-09-22"
         },
         {
+          "titulo": "FICHA EPI 2026 modelo novo",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FICHA EPI 2026 modelo novo.docx",
+          "tipo": "word",
+          "tamanho": 77236,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
           "titulo": "FORMULARIO HORA EXTRA",
           "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FORMULARIO HORA EXTRA.docx",
           "tipo": "word",
@@ -73,6 +80,33 @@
           "tipo": "word",
           "tamanho": 75418,
           "atualizadoEm": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "id": "formularios-assistenciais",
+      "nome": "Formulários assistenciais",
+      "materiais": [
+        {
+          "titulo": "Relatório mensal de oxigênio",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Relatório mensal de oxigênio.pdf",
+          "tipo": "pdf",
+          "tamanho": 25078,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Termo de laqueadura",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de laqueadura.pdf",
+          "tipo": "pdf",
+          "tamanho": 319507,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Termo de vasectomia",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de vasectomia.pdf",
+          "tipo": "pdf",
+          "tamanho": 315612,
+          "atualizadoEm": "2026-09-25"
         }
       ]
     },
@@ -114,6 +148,61 @@
           "tipo": "excel",
           "tamanho": 236032,
           "atualizadoEm": "2026-08-30"
+        }
+      ]
+    },
+    {
+      "id": "indicadores-aps",
+      "nome": "Indicadores da APS (fichas técnicas do Ministério)",
+      "materiais": [
+        {
+          "titulo": "C1 - Mais acesso à Atenção Primária à Saúde",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C1 - Mais acesso à Atenção Primária à Saúde.pdf",
+          "tipo": "pdf",
+          "tamanho": 516146,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C2 - Cuidado no desenvolvimento infantil",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C2 - Cuidado no desenvolvimento infantil.pdf",
+          "tipo": "pdf",
+          "tamanho": 488653,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C3 - Cuidado da gestante e puérpera",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C3 - Cuidado da gestante e puérpera.pdf",
+          "tipo": "pdf",
+          "tamanho": 550364,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C4 - Cuidado da pessoa com diabetes",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C4 - Cuidado da pessoa com diabetes.pdf",
+          "tipo": "pdf",
+          "tamanho": 487959,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C5 - Cuidado da pessoa com hipertensão",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C5 - Cuidado da pessoa com hipertensão.pdf",
+          "tipo": "pdf",
+          "tamanho": 537595,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C6 - Cuidado da pessoa idosa",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C6 - Cuidado da pessoa idosa.pdf",
+          "tipo": "pdf",
+          "tamanho": 480174,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "C7 - Cuidado da mulher na prevenção do câncer",
+          "arquivo": "MATERIAIS PUBLICADOS/INDICADORES APS/C7 - Cuidado da mulher na prevenção do câncer.pdf",
+          "tipo": "pdf",
+          "tamanho": 550921,
+          "atualizadoEm": "2026-09-25"
         }
       ]
     }

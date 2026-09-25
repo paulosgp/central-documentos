@@ -56,10 +56,18 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
   (`RH E SERVIDOR` → "RH e servidor", `OFICIOS E MEMORANDOS` → "Ofícios e memorandos",
   `FORMULARIOS ASSISTENCIAIS` → "Formulários assistenciais", e desde 22/09/2026 as duas que o
   Paulo criou: `ESTRATIFICAÇÕES DE RISCO` → "Estratificações de risco", `ANEXOS ADMINISTRATIVO`
-  → "Anexos administrativos"); pasta fora do mapa entra depois, em ordem alfabética, com o nome
+  → "Anexos administrativos", e desde 25/09/2026 `INDICADORES APS` → "Indicadores da APS (fichas
+  técnicas do Ministério)"); pasta fora do mapa entra depois, em ordem alfabética, com o nome
   da pasta como está — o que, para pasta em maiúsculas, fica gritado ("ANEXOS ADMINISTRATIVO" foi
   assim na primeira publicação); quando ele criar pasta nova, acrescentar ao mapa.
 - **Nome do arquivo sem extensão = título** exibido. Acento e espaço podem.
+- **Arquivo solto na raiz não vai ao site** (vira aviso "fora de categoria"). **E isso virou um
+  jeito de trabalhar, não um erro** (25/09/2026): o Paulo põe na raiz o que não sabe onde
+  encaixar e pede ao Claude para organizar. Então, a cada publicação com arquivo solto: ler o
+  conteúdo (`pdftotext -l 1`, ou o `word/document.xml` do .docx), propor a categoria de cada um
+  pelo que o documento É, e não pelo nome, mover, e só então publicar. Foi assim com os 11 de
+  25/09 (abaixo). Mostrar os soltos no site numa categoria "Outros" foi considerado e não feito:
+  viraria o lugar onde tudo cai e ninguém organiza.
 - **Ignorados**: `LEIA-ME.txt` e arquivos começando com `.` (em silêncio: são esperados — o
   `.gitkeep` segura cada categoria vazia no Git); arquivos começando com `_` ou `~$`
   (temporários do Office), subpastas dentro de categoria, arquivos vazios, acima de 95 MB
@@ -164,6 +172,15 @@ não faz parte do site.
   `paulosgp.github.io.` pelo Chrome; DNS respondeu em 8.8.8.8 e 1.1.1.1 no primeiro minuto;
   `CNAME` no repositório, certificado `approved`, `https_enforced` ligado; cartão do Guia
   Saúde trocado para o definitivo. Entrou a pré-visualização (acima).
+- **25/09/2026**: o Paulo deixou 11 arquivos soltos na raiz, sem saber onde encaixar. Lidos um
+  a um: as **sete fichas técnicas de qualificação do Ministério da Saúde** (C1 a C7, os
+  indicadores de qualidade do novo financiamento da APS) viraram a categoria nova
+  `INDICADORES APS`, com o código na frente do nome ("C1 - Mais acesso…") para ficarem na
+  ordem oficial e não na alfabética; **termos de laqueadura e de vasectomia e o relatório mensal
+  de oxigênio domiciliar** foram para `FORMULARIOS ASSISTENCIAIS` (a pasta tinha sumido e foi
+  recriada); a **requisição de EPI** foi para `RH E SERVIDOR` (é pedida pelo servidor, com nome
+  e matrícula). Dois nomes corrigidos: "Relatorio de Oxigenio Mensal (1)" (o "(1)" é sobra de
+  download) e "Termo Laqueadura". Ficaram 25 materiais em 5 categorias.
 
 ## Pendências
 
