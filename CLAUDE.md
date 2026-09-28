@@ -62,6 +62,19 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
   da pasta como está — o que, para pasta em maiúsculas, fica gritado ("ANEXOS ADMINISTRATIVO" foi
   assim na primeira publicação); quando ele criar pasta nova, acrescentar ao mapa.
 - **Nome do arquivo sem extensão = título** exibido. Acento e espaço podem.
+  **O nome diz o que o documento É, em português corrente, e não o nome com que ele chegou**
+  (27/09/2026, pedido do Paulo: *"renomeie eles para um nome melhor"*). Os arquivos vinham como
+  foram salvos por quem os fez ("FICHA EPI 2026 modelo novo", "PLANILHA AUT. H.E.",
+  "escala_setembro_2026"), e a lista do site virava uma parede de maiúsculas e siglas. Padrão:
+  primeira letra maiúscula, o resto minúsculo; **o número de anexo oficial, quando existe, vai para
+  o FIM, entre parênteses** — "Solicitação de férias (Anexo VII)" —, e não na frente, porque quem
+  procura "Anexo VII" ainda acha pela busca, mas a lista passa a ser lida (e ordenada) pelo que o
+  documento é; sigla idem — "Autorização de viagem a serviço (AVS)". As fichas de indicador são a
+  exceção de propósito: o código vai NA FRENTE ("C1 - …"), porque ali a ordem oficial é a útil.
+  Renomear com `git mv` (o histórico acompanha o arquivo); troca que só muda maiúscula precisa de
+  dois passos com um nome temporário, porque o Windows trata os dois nomes como o mesmo arquivo.
+  **Antes de renomear, procurar referência ao arquivo nos outros apps**: o RH Saúde usa os modelos
+  da Central (em 27/09 só tinha copiado o brasão do Anexo VII uma vez, e nenhum caminho no código).
 - **Arquivo solto na raiz não vai ao site** (vira aviso "fora de categoria"). **E isso virou um
   jeito de trabalhar, não um erro** (25/09/2026): o Paulo põe na raiz o que não sabe onde
   encaixar e pede ao Claude para organizar. Então, a cada publicação com arquivo solto: ler o
@@ -241,6 +254,10 @@ não faz parte do site.
   quem conduziu e de quem redigiu; e a lista de presença em página própria, 20 linhas, cabeçalho
   repetido se passar de página. Parágrafos de preencher ficaram alinhados à esquerda, e não
   justificados: justificado, cada lacuna `______` abria buracos no meio da linha.
+
+- **27/09/2026**: os 19 materiais que ainda tinham o nome de origem foram renomeados pelo padrão
+  acima (lista completa no commit). Link direto para arquivo mandado antes disso deixa de abrir; a
+  página e os links de categoria continuam valendo.
 
 ## Pendências
 

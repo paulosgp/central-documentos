@@ -1,69 +1,48 @@
 {
-  "geradoEm": "2026-09-25T04:48:32.140Z",
+  "geradoEm": "2026-09-28T00:19:23.038Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
       "nome": "RH e servidor",
       "materiais": [
         {
-          "titulo": "Anexo IV - PONTO MANUAL",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo IV - PONTO MANUAL.docx",
-          "tipo": "word",
-          "tamanho": 201434,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Anexo VII - NOVA SOLICITAÇÃO DE FÉRIAS.docx",
-          "tipo": "word",
-          "tamanho": 77953,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "AVS - Autorização de viagem a serviço",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/AVS - Autorização de viagem a serviço.docx",
+          "titulo": "Autorização de viagem a serviço (AVS)",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Autorização de viagem a serviço (AVS).docx",
           "tipo": "word",
           "tamanho": 138603,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "DADOS PARA O CONTRATO DE ESTÁGIO",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DADOS PARA O CONTRATO DE ESTÁGIO.docx",
+          "titulo": "Cartão ponto manual (Anexo IV)",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Cartão ponto manual (Anexo IV).docx",
+          "tipo": "word",
+          "tamanho": 201434,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Dados para o contrato de estágio",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Dados para o contrato de estágio.docx",
           "tipo": "word",
           "tamanho": 15680,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/DECLARAÇÃO LICENÇA DE ACOMPANHAMENTO FAMILIAR.docx",
+          "titulo": "Declaração para licença por doença em pessoa da família",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Declaração para licença por doença em pessoa da família.docx",
           "tipo": "word",
           "tamanho": 17102,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "escala_setembro_2026",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/escala_setembro_2026.xlsx",
+          "titulo": "Escala mensal de serviço da enfermagem",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Escala mensal de serviço da enfermagem.xlsx",
           "tipo": "excel",
           "tamanho": 11897,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "FICHA EPI 2026 modelo novo",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FICHA EPI 2026 modelo novo.docx",
-          "tipo": "word",
-          "tamanho": 76396,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "FORMULARIO HORA EXTRA",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/FORMULARIO HORA EXTRA.docx",
-          "tipo": "word",
-          "tamanho": 97965,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "PLANILHA AUT. H.E.",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/PLANILHA AUT. H.E..docx",
+          "titulo": "Planilha de autorização de horas extras",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Planilha de autorização de horas extras.docx",
           "tipo": "word",
           "tamanho": 119699,
           "atualizadoEm": "2026-09-25"
@@ -76,10 +55,31 @@
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/REQUERIMENTO DE FÉRIAS ESTAGIÁRIOS.docx",
+          "titulo": "Requerimento de férias de estagiário",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Requerimento de férias de estagiário.docx",
           "tipo": "word",
           "tamanho": 111405,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Requisição de EPI",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Requisição de EPI.docx",
+          "tipo": "word",
+          "tamanho": 76396,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Solicitação de férias (Anexo VII)",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Solicitação de férias (Anexo VII).docx",
+          "tipo": "word",
+          "tamanho": 77953,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Solicitação e autorização de hora extra (SASE)",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Solicitação e autorização de hora extra (SASE).docx",
+          "tipo": "word",
+          "tamanho": 97965,
           "atualizadoEm": "2026-09-25"
         }
       ]
@@ -89,17 +89,17 @@
       "nome": "Ofícios, memorandos e atas",
       "materiais": [
         {
-          "titulo": "Anexo VI - Memorando",
-          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Anexo VI - Memorando.docx",
-          "tipo": "word",
-          "tamanho": 74849,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
           "titulo": "Ata de reunião",
           "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Ata de reunião.docx",
           "tipo": "word",
           "tamanho": 78937,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Memorando de frequência (Anexo VI)",
+          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Memorando de frequência (Anexo VI).docx",
+          "tipo": "word",
+          "tamanho": 74849,
           "atualizadoEm": "2026-09-25"
         }
       ]
@@ -109,24 +109,24 @@
       "nome": "Formulários assistenciais",
       "materiais": [
         {
-          "titulo": "Relatório mensal de oxigênio",
-          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Relatório mensal de oxigênio.pdf",
-          "tipo": "pdf",
-          "tamanho": 25078,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "Termo de laqueadura",
-          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de laqueadura.pdf",
+          "titulo": "Termo de consentimento para laqueadura",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de consentimento para laqueadura.pdf",
           "tipo": "pdf",
           "tamanho": 319507,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Termo de vasectomia",
-          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de vasectomia.pdf",
+          "titulo": "Termo de consentimento para vasectomia",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de consentimento para vasectomia.pdf",
           "tipo": "pdf",
           "tamanho": 315612,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Visita domiciliar mensal - oxigenoterapia e ventilação",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Visita domiciliar mensal - oxigenoterapia e ventilação.pdf",
+          "tipo": "pdf",
+          "tamanho": 25078,
           "atualizadoEm": "2026-09-25"
         }
       ]
@@ -177,38 +177,38 @@
       "nome": "Anexos administrativos",
       "materiais": [
         {
-          "titulo": "Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo II - TERMO INDICAÇÃO FISCAL E GESTOR.docx",
-          "tipo": "word",
-          "tamanho": 199902,
+          "titulo": "Checklist de veículos (Anexo VI)",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Checklist de veículos (Anexo VI).xls",
+          "tipo": "excel",
+          "tamanho": 219648,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Anexo III - MODELO COTAÇÃO",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo III - MODELO COTAÇÃO.pdf",
+          "titulo": "Orçamento de preço - modelo de cotação (Anexo III)",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Orçamento de preço - modelo de cotação (Anexo III).pdf",
           "tipo": "pdf",
           "tamanho": 357481,
           "atualizadoEm": "2026-08-30"
         },
         {
-          "titulo": "Anexo IV - Solicitação de consertos",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo IV - Solicitação de consertos.docx",
-          "tipo": "word",
-          "tamanho": 199072,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "Anexo V - Pedidos materiais e outros",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo V - Pedidos materiais e outros.docx",
+          "titulo": "Pedido de materiais - almoxarifado e ata de registro de preços (Anexo V)",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Pedido de materiais - almoxarifado e ata de registro de preços (Anexo V).docx",
           "tipo": "word",
           "tamanho": 211127,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Anexo VI - Check list veículos",
-          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Anexo VI - Check list veículos.xls",
-          "tipo": "excel",
-          "tamanho": 219648,
+          "titulo": "Solicitação de pequenos consertos (Anexo IV)",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Solicitação de pequenos consertos (Anexo IV).docx",
+          "tipo": "word",
+          "tamanho": 199072,
+          "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Termo de indicação de gestor e fiscal de contrato (Anexo II)",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Termo de indicação de gestor e fiscal de contrato (Anexo II).docx",
+          "tipo": "word",
+          "tamanho": 199902,
           "atualizadoEm": "2026-09-25"
         }
       ]
