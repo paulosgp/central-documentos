@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-09-28T00:19:23.038Z",
+  "geradoEm": "2026-09-28T00:30:45.106Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -34,15 +34,15 @@
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Escala mensal de serviço da enfermagem",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Escala mensal de serviço da enfermagem.xlsx",
+          "titulo": "Escala mensal de serviço",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Escala mensal de serviço.xlsx",
           "tipo": "excel",
           "tamanho": 11897,
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Planilha de autorização de horas extras",
-          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Planilha de autorização de horas extras.docx",
+          "titulo": "Planilha registro de horas extras",
+          "arquivo": "MATERIAIS PUBLICADOS/RH E SERVIDOR/Planilha registro de horas extras.docx",
           "tipo": "word",
           "tamanho": 119699,
           "atualizadoEm": "2026-09-25"
@@ -96,8 +96,8 @@
           "atualizadoEm": "2026-09-25"
         },
         {
-          "titulo": "Memorando de frequência (Anexo VI)",
-          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Memorando de frequência (Anexo VI).docx",
+          "titulo": "Memorando de envio de documentos ao RH",
+          "arquivo": "MATERIAIS PUBLICADOS/OFICIOS E MEMORANDOS/Memorando de envio de documentos ao RH.docx",
           "tipo": "word",
           "tamanho": 74849,
           "atualizadoEm": "2026-09-25"
@@ -108,6 +108,13 @@
       "id": "formularios-assistenciais",
       "nome": "Formulários assistenciais",
       "materiais": [
+        {
+          "titulo": "Relatório mensal de oxigênio",
+          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Relatório mensal de oxigênio.pdf",
+          "tipo": "pdf",
+          "tamanho": 25078,
+          "atualizadoEm": "2026-09-25"
+        },
         {
           "titulo": "Termo de consentimento para laqueadura",
           "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de consentimento para laqueadura.pdf",
@@ -120,13 +127,6 @@
           "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Termo de consentimento para vasectomia.pdf",
           "tipo": "pdf",
           "tamanho": 315612,
-          "atualizadoEm": "2026-09-25"
-        },
-        {
-          "titulo": "Visita domiciliar mensal - oxigenoterapia e ventilação",
-          "arquivo": "MATERIAIS PUBLICADOS/FORMULARIOS ASSISTENCIAIS/Visita domiciliar mensal - oxigenoterapia e ventilação.pdf",
-          "tipo": "pdf",
-          "tamanho": 25078,
           "atualizadoEm": "2026-09-25"
         }
       ]

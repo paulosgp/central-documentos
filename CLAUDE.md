@@ -73,6 +73,10 @@ Regras (também no `LEIA-ME.txt` da pasta, para quem a abrir sem este arquivo):
   exceção de propósito: o código vai NA FRENTE ("C1 - …"), porque ali a ordem oficial é a útil.
   Renomear com `git mv` (o histórico acompanha o arquivo); troca que só muda maiúscula precisa de
   dois passos com um nome temporário, porque o Windows trata os dois nomes como o mesmo arquivo.
+  **Nome escolhido pelo Paulo vale mais que o padrão, e fica como ele escreveu** (27/09/2026, logo
+  depois da padronização): "Planilha registro de horas extras", "Escala mensal de serviço" (sem "da
+  enfermagem"), "Memorando de envio de documentos ao RH" (sem o número do anexo) e "Relatório mensal
+  de oxigênio" (ele quis manter o nome anterior à padronização). Não "corrigir" esses para o padrão.
   **Antes de renomear, procurar referência ao arquivo nos outros apps**: o RH Saúde usa os modelos
   da Central (em 27/09 só tinha copiado o brasão do Anexo VII uma vez, e nenhum caminho no código).
 - **Arquivo solto na raiz não vai ao site** (vira aviso "fora de categoria"). **E isso virou um
