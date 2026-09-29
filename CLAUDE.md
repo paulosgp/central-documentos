@@ -262,6 +262,11 @@ não faz parte do site.
 - **27/09/2026**: os 19 materiais que ainda tinham o nome de origem foram renomeados pelo padrão
   acima (lista completa no commit). Link direto para arquivo mandado antes disso deixa de abrir; a
   página e os links de categoria continuam valendo.
+- **28/09/2026**: na **Solicitação de férias (Anexo VII)**, o rodapé passou de "60 dias anteriores" para
+  **"70 dias anteriores"** no prazo de entrega com abono pecuniário, a pedido do Paulo: a regra é 70, e
+  o RH Saúde já imprime 70 no PDF (ver o `CLAUDE.md` do RH Saúde, "O fluxo das férias"). Trocado pelo
+  *Localizar e substituir* do Word, por COM (a formatação fica), com os metadados limpos. O original
+  está no commit anterior.
 
 ## Pendências
 
