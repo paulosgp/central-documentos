@@ -266,7 +266,8 @@ não faz parte do site.
   **"70 dias anteriores"** no prazo de entrega com abono pecuniário, a pedido do Paulo: a regra é 70, e
   o RH Saúde já imprime 70 no PDF (ver o `CLAUDE.md` do RH Saúde, "O fluxo das férias"). Trocado pelo
   *Localizar e substituir* do Word, por COM (a formatação fica), com os metadados limpos. O original
-  está no commit anterior.
+  está no commit anterior. No mesmo dia, a pedido dele, a linha da data do modelo passou de "de 2025"
+  para "de 2026" (do mesmo jeito).
 
 ## Pendências
 
