@@ -268,6 +268,21 @@ não faz parte do site.
   *Localizar e substituir* do Word, por COM (a formatação fica), com os metadados limpos. O original
   está no commit anterior. No mesmo dia, a pedido dele, a linha da data do modelo passou de "de 2025"
   para "de 2026" (do mesmo jeito).
+- **22/10/2026**: a **Solicitação e autorização de hora extra (SASE)** foi trocada por um modelo novo,
+  feito pelo Claude a pedido do Paulo ("mais organizado e claro"), com o mesmo nome de arquivo. Mesmo
+  conteúdo e as mesmas declarações do Anexo I oficial, no timbre da Prefeitura (cabeçalho e rodapé
+  tirados do próprio original), mas em quadros: faixa por seção com "quem preenche", campos em caixa no
+  lugar dos sublinhados, assinaturas sempre em nome | assinatura | data, caixinhas ☐. Caiu de 4 para 2
+  páginas (pág. 1: identificação, justificativa e autorização; pág. 2: ciência, homologação e RH).
+  Campos acrescentados: matrícula, unidade/setor, chefia imediata, horário de início/término e total de
+  horas previstas (o original só pedia a data). Margens laterais de 2 cm (o original tem 3 à esquerda).
+  O original está no commit anterior. **O PDF da SASE que o RH Saúde gera (`Sistemas RH/src/pdf/Sase.tsx`)
+  continua no layout antigo**: ele cita este arquivo só em comentário e monta o próprio PDF.
+- **Armadilha do `publicar.js` em clone novo** (achada em 22/10/2026, numa sessão na nuvem): o
+  `atualizadoEm` vem da data de modificação do arquivo no disco, e um `git clone` dá a todos a data do
+  clone. Rodar `node publicar.js` ali marca os 36 materiais como "mudaram" e troca todas as datas do
+  site. Fora da máquina do Paulo, editar só a entrada do arquivo trocado no `materiais.json` (tamanho e
+  data) em vez de regenerar tudo.
 
 ## Pendências
 
