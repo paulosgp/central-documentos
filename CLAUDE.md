@@ -277,7 +277,9 @@ não faz parte do site.
   Campos acrescentados: matrícula, unidade/setor, chefia imediata, horário de início/término e total de
   horas previstas (o original só pedia a data). Margens laterais de 2 cm (o original tem 3 à esquerda).
   O original está no commit anterior. **O PDF da SASE que o RH Saúde gera (`Sistemas RH/src/pdf/Sase.tsx`)
-  continua no layout antigo**: ele cita este arquivo só em comentário e monta o próprio PDF.
+  segue este modelo novo desde 22/10/2026** (RH, `master` 5729f06, com o aval do Paulo): 2 folhas, os mesmos
+  rótulos, e em branco o que o RH não guarda (horários, total de horas, assinaturas, quadros do Secretário e do
+  RH). Ele monta o próprio PDF, sem ler este arquivo: **mudar a SASE aqui obriga a pedir a mesma mudança lá.**
 - **Armadilha do `publicar.js` em clone novo** (achada em 22/10/2026, numa sessão na nuvem): o
   `atualizadoEm` vem da data de modificação do arquivo no disco, e um `git clone` dá a todos a data do
   clone. Rodar `node publicar.js` ali marca os 36 materiais como "mudaram" e troca todas as datas do
