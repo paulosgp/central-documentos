@@ -284,6 +284,14 @@ não faz parte do site.
   site. Fora da máquina do Paulo, editar só a entrada do arquivo trocado no `materiais.json` (tamanho e
   data) em vez de regenerar tudo.
 
+- **22/10/2026**: o Paulo mandou quatro PDFs preenchíveis, todos conferidos em branco (sem valor gravado nos
+  campos, sem nome nas propriedades). A **Ata de reunião** e a **SASE** em PDF **substituíram as versões em Word**,
+  a pedido dele ("se já tiver algum relacionado, substitua"): a ata de 25/09, feita pelo Claude, saiu, e a
+  SASE em Word que saiu é a do modelo novo feito HORAS ANTES, na nuvem (item acima); o PDF é a exportação
+  dela. O Word editável fica no histórico (commit b0e9de6), se ele quiser os dois formatos. Entraram
+  em `RH E SERVIDOR` a **Advertência por escrito** e a **Suspensão disciplinar**, modelos para a chefia. Nenhum
+  outro app aponta para esses arquivos (o RH Saúde tem a SASE própria, gerada na hora).
+
 ## Pendências
 
 - **A publicação não é automática, e o Paulo esperou que fosse** (22/09/2026: "já coloquei várias
