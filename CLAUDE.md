@@ -288,7 +288,8 @@ não faz parte do site.
   campos, sem nome nas propriedades). A **Ata de reunião** e a **SASE** em PDF **substituíram as versões em Word**,
   a pedido dele ("se já tiver algum relacionado, substitua"): a ata de 25/09, feita pelo Claude, saiu, e a
   SASE em Word que saiu é a do modelo novo feito HORAS ANTES, na nuvem (item acima); o PDF é a exportação
-  dela. O Word editável fica no histórico (commit b0e9de6), se ele quiser os dois formatos. Entraram
+  dela. No mesmo dia ele pediu os dois formatos: o Word do modelo novo voltou (do commit b0e9de6) e fica ao
+  lado do PDF, com o mesmo título (a lista diferencia pelo tipo, Word ou PDF). Entraram
   em `RH E SERVIDOR` a **Advertência por escrito** e a **Suspensão disciplinar**, modelos para a chefia. Nenhum
   outro app aponta para esses arquivos (o RH Saúde tem a SASE própria, gerada na hora).
 
