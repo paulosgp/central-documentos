@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-22T20:33:19.053Z",
+  "geradoEm": "2026-10-23T18:13:22.426Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -238,6 +238,13 @@
           "tipo": "word",
           "tamanho": 199072,
           "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Solicitação de retirada e transporte de móveis",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Solicitação de retirada e transporte de móveis.docx",
+          "tipo": "word",
+          "tamanho": 85141,
+          "atualizadoEm": "2026-10-23"
         },
         {
           "titulo": "Termo de indicação de gestor e fiscal de contrato (Anexo II)",
