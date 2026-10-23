@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-23T18:13:22.426Z",
+  "geradoEm": "2026-10-23T23:11:24.962Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -244,6 +244,13 @@
           "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Solicitação de retirada e transporte de móveis.docx",
           "tipo": "word",
           "tamanho": 85141,
+          "atualizadoEm": "2026-10-23"
+        },
+        {
+          "titulo": "Solicitação de retirada e transporte de móveis",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Solicitação de retirada e transporte de móveis.pdf",
+          "tipo": "pdf",
+          "tamanho": 147910,
           "atualizadoEm": "2026-10-23"
         },
         {
