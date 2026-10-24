@@ -143,6 +143,7 @@ dialog.previa::backdrop{background:rgba(10,20,15,.6)}
 .fechar:hover,.fechar:focus-visible{border-color:var(--verde)}
 .previa-corpo{flex:1;position:relative;background:#e9ece8}
 .previa-corpo iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff}
+/* o texto vai num <span>: com o display:grid, cada pedaço (texto, link, texto) virava uma linha solta (24/10/2026) */
 .previa-aviso{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:24px;color:var(--muted);font-size:15.5px}
 .previa-aviso a{color:var(--chip-ink);font-weight:600}
 .previa-corpo.carregou .previa-aviso{display:none}
@@ -190,7 +191,7 @@ dialog.previa::backdrop{background:rgba(10,20,15,.6)}
       <button class="fechar" id="previa-fechar" type="button" aria-label="Fechar">×</button>
     </div>
     <div class="previa-corpo" id="previa-corpo">
-      <p class="previa-aviso" id="previa-aviso">Carregando o documento… Se não aparecer, <a id="previa-fora" href="#" target="_blank" rel="noopener">abra em outra aba</a> ou toque em Baixar.</p>
+      <p class="previa-aviso" id="previa-aviso"><span>Carregando o documento… Se não aparecer, <a id="previa-fora" href="#" target="_blank" rel="noopener">abra em outra aba</a> ou toque em Baixar.</span></p>
       <iframe id="previa-quadro" title="Documento"></iframe>
     </div>
     <div class="previa-rodape">
