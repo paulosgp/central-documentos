@@ -142,6 +142,10 @@ enviadas: o repositório é público, e a versão do Termo com as duas servidora
 `push --force`), o que é irreversível e mexe no espelho `paulosgp/apps`. **Não foi feito sem o
 Paulo decidir.** Por isso a conferência tem de vir ANTES da primeira publicação, não depois.
 
+## Curso na Trilha de Integração
+
+Este sistema tem curso na Trilha de Integração (`Guia Saude App/src/lib/integracao/cursos/central-documentos.ts`). Mudou a tela, o menu ou o que o curso ensina (a busca só pelo nome, os botões das categorias, a linha do documento com tipo, tamanho e data, a janela de pré-visualização e seus botões "Baixar este documento" e "Fechar", o botão Baixar, o aviso "Nada com esse nome", o quadro "Coloque na tela do seu celular", o contato da coordenação no rodapé)? Atualize o curso na mesma tarefa (regra do Paulo, 23/10/2026, no CLAUDE.md da raiz): o texto e as perguntas, e as imagens com `npm run integracao:capturar-central-documentos` na pasta do Guia (só precisa de internet; não baixa arquivo e não mostra o WhatsApp do rodapé); depois `npm test` no Guia. O curso diz que a Central só entrega o modelo em branco e que ela não recebe arquivo: se um dia entrar upload ou contagem, o curso muda.
+
 ## Como publicar
 
 ```bash
