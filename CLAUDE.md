@@ -303,6 +303,8 @@ não faz parte do site.
   branco que o Paulo mandou). Antes de publicar: tirado o nome de quem salvou por último das propriedades e
   corrigido "À SECRETRIA DE SAÚDE" para "SECRETARIA" no título.
 
+- **05/11/2026**: o Paulo mandou dois Word. O **Projeto** (modelo de projeto de ação ou evento: identificação, dados gerais, plano de ação, recursos materiais; os exemplos "Agosto Dourado" são do modelo) entrou em `ANEXOS ADMINISTRATIVO` como "Projeto de ação ou evento - plano de ação e recursos", sem nome nas propriedades. O **"Pedidos materiais e outros"** NÃO foi publicado: tem o mesmo texto do "Pedido de materiais - almoxarifado e ata de registro de preços (Anexo V)" que já está no ar.
+
 ## Pendências
 
 - **A publicação não é automática, e o Paulo esperou que fosse** (22/09/2026: "já coloquei várias
