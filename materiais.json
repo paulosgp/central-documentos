@@ -1,5 +1,5 @@
 {
-  "geradoEm": "2026-10-23T23:11:24.962Z",
+  "geradoEm": "2026-11-05T13:35:26.863Z",
   "categorias": [
     {
       "id": "rh-e-servidor",
@@ -231,6 +231,13 @@
           "tipo": "word",
           "tamanho": 211127,
           "atualizadoEm": "2026-09-25"
+        },
+        {
+          "titulo": "Projeto de ação ou evento - plano de ação e recursos",
+          "arquivo": "MATERIAIS PUBLICADOS/ANEXOS ADMINISTRATIVO/Projeto de ação ou evento - plano de ação e recursos.docx",
+          "tipo": "word",
+          "tamanho": 208245,
+          "atualizadoEm": "2026-11-05"
         },
         {
           "titulo": "Solicitação de pequenos consertos (Anexo IV)",
